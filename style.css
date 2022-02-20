@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+* {
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", "Trebuchet MS", sans-serif;
+}
+
+#navbar{
+  border-left: 1px solid #000;
+  border-right: 1px solid rgba(40, 0, 0, 0.7);;
+  position: fixed;
+  height: 100%;
+  min-width: 230px;
+  top: 0;
+  left: 0;
+  }
+#navbar h1{
+  padding: 7px;
+  background: linear-gradient(290deg, #5900a8, #001e4f);
+  color: #eee;
+  border-top: 2px solid #ffdb00;
+  box-shadow: 0 2px 3px #666;
+}
+#navbar a{
+  text-decoration: none;
+  color: rgba(0, 8, 22, 0.9);  
+}
+a h2{
+  width: 100%;
+  padding: 7px;  
+}
+#navbar a:nth-child(odd){
+  color: rgba(0, 8, 22, 0.7);
+}
+.nav-link :hover{
+  background-color: #aaa;
+}
+#main-doc{
+  position: absolute;
+  top: 0;
+  left: 230px;
+}
+.main-section{
+  padding: 10px;
+  text-align: justify;
+}
+.main-section header{
+  padding-bottom: 10px;
+  color: rgba(40, 0, 0, 0.9);
+}
+.main-section p{
+  color: rgba(40, 0, 0, 0.8);
+}
+.main-section li{
+  margin: 10px 0 0 15px;
+  color: rgba(40, 0, 0, 0.8);
+}
+code{
+  background-color: #d3e4ff;
+  font-family: "Courier New";
+}
+#Items a, #Container a{
+  text-decoration: none;
+  color: #222;  
+} 
+#Items p, #Container p{
+  margin: 5px;
+}
+#back-to-top{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: linear-gradient(25deg,#ff5d00, #ff0a37, #ff5d00);
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 1px 2px 4px #333, 3px 3px 5px #333;
+  display: none;
+  }
+#back-to-top a{
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  #navbar{
+    position: absolute;
+    width: 100%;
+  height: 170px;
+    overflow: auto;
+    z-index: 1;
+    box-shadow: 0 1px 2px #555;
+  }
+  #main-doc{
+    left: 0;
+    margin-top: 170px;
+  }
+  #back-to-top{
+    display: block;
+  }
+}
