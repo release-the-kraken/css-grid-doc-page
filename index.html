@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid documentation</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<div id="container">
+  <nav id="navbar">
+    <header>
+    <h1>CSS Grid</h1>
+    </header>
+    <a href="#Introduction" class="nav-link"><h2>Introduction</h2></a>
+    
+    <a href="#Basic_concepts" class="nav-link"><h2>Basic concepts</h2></a>
+    
+    <a href="#Important_terms" class="nav-link"><h2>Important terms</h2></a>
+    
+    <a href="#Container" class="nav-link"><h2>Container</h2></a>
+    
+    <a href="#Items" class="nav-link"><h2>Items</h2></a>
+    <a href="#References" class="nav-link"><h2>References</h2></a>
+  </nav>
+  <main id="main-doc">
+    
+    <section class="main-section" id="Introduction">
+      <header> 
+      <h1>Introduction</h1>
+      </header>
+      <p>CSS Grid Layout is a two dimensional layout system which enables an author to align elements into columns and rows. It allows the developer to divide a page into major regions or define the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.</p>
+      <p>In this respect it is similar to tables, however, many more layouts are either possible or easier with CSS grid than they were with tables.</p>
+    </section>
+    
+    <section class="main-section" id="Basic_concepts"> 
+      <header>
+      <h1>Basic concepts</h1>
+      </header>
+      <p>A grid is an intersecting set of horizontal and vertical lines – one set defining columns, and the other, rows. Elements can be placed onto the grid, within these column and row lines. CSS grid layout has the following features:</p>
+      <ul>
+        <li>
+          <h3>Fixed and flexible track sizes</h3>
+          <p>You can create a grid with fixed track sizes – using pixels for example. This sets the grid to the specified pixel which fits to the layout you desire. You can also create a grid using flexible sizes with percentages or with the new fr unit designed for this purpose.</p>
+        </li>
+        <li>
+          <h3>Item placement</h3>
+          <p>You can place items into a precise location on the grid using line numbers, names or by targeting an area of the grid. Grid also contains an algorithm to control the placement of items not given an explicit position on the grid.</p>
+        </li>
+        <li>
+          <h3>Creation of additional tracks to hold content</h3>
+          <p>You can define an explicit grid with grid layout. The Grid Layout specification is flexible enough to add additional rows and columns when needed. Features such as adding “as many columns that will fit into a container” are included.</p>
+        </li>
+        <li>
+          <h3>Alignment control</h3>
+          <p>Grid contains alignment features so we can control how the items align once placed into a grid area, and how the entire grid is aligned. </p>
+        </li>
+        <li>
+          <h3>Control of overlapping content</h3>
+          <p>More than one item can be placed into a grid cell or area and, they can partially overlap each other. This layering may then be controlled with the <code>z-index</code> property.</p>
+        </li>
+      </ul>
+    </section>
+    
+    <section class="main-section" id="Important_terms">
+      <header>
+      <h1>Important terms</h1>
+      </header>
+      <ul>
+        <li>
+          <h3>Grid container</h3>
+          <p>A grid container is created by declaring <code>display: grid</code> on an element. </p>
+          
+        </li>
+        <li>
+          <h3>Grid item</h3>
+          <p>All direct children of a grid container become grid items.</p>
+        </li>
+                <li>
+          <h3>Grid track</h3>
+          <p>A grid track is the space between any two lines on the grid. We define rows and columns on our grid with the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties. These define grid tracks. </p>
+        </li>
+        <li>
+          <h3>Grid line</h3>
+          <p>When we define a grid we define the grid tracks, not the lines. Grid then gives us numbered lines to use when positioning items. </p>
+          <p>Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid.</p>
+        </li>
+        <li>
+          <h3>Grid cell</h3>
+          <p>A grid cell is the smallest unit on a grid. Conceptually it is like a table cell. Once a grid is defined as a parent the child items will lay themselves out in one cell each of the defined grid. </p>
+        </li>
+        <li>
+          <h3>Grid area</h3>
+          <p>Items can span one or more cells both by row or by column, and this creates a grid area. Grid areas must be rectangular.</p>
+        </li>
+      </ul>
+    </section>
+    
+    <section class="main-section" id="Container">
+      <header>
+      <h1>Container</h1>
+        </header>
+      <p>Properties for the Grid Container. Click on property names for more information.</p>
+      
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank"><h4>display</h4></a>
+        <p>Defines the display type of an element. You use it to apply a CSS Grid to a container by giving it the <code>display: grid</code> property.</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns" target="_blank"><h4>grid-template-columns</h4></a>
+        <p>Defines the line names and track sizing functions of the grid columns.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows" target="_blank"><h4>grid-template-rows</h4></a>
+        <p>Defines the line names and track sizing functions of the grid rows.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas" target="_blank"><h4>grid-template-areas</h4></a>
+        <p>Specifies named grid areas</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template" target="_blank"><h4>grid-template</h4></a>
+        <p>A shorthand property for defining grid columns, rows, and areas.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap" target="_blank"><h4>grid-column-gap</h4></a>
+        <p>Sets the size of the gap (gutter) between an element's columns.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap" target="_blank"><h4>grid-row-gap</h4></a>
+      <p>Sets the size of the gap (gutter) between an element's grid rows.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap" target="_blank"><h4>grid-gap</h4></a>
+      <p>A shorthand for <code>grid-row-gap</code> and <code>grid-column-gap</code>.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items" target="_blank"><h4>justify-items</h4></a>
+        <p>Defines the default <code>justify-self</code> for all items of the box, giving them all a default way of justifying each box along the appropriate axis.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items" target="_blank"><h4>align-items</h4></a>
+        <p>Sets the <code>align-self</code> value on all direct children as a group. In Grid Layout, it controls the alignment of items on the Block Axis within their grid area.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/place-items" target="_blank"><h4>place-items</h4></a>
+        <p>A shorthand property which sets the <code>align-items</code> and <code>justify-items</code> properties, respectively. If the second value is not set, the first value is also used for it.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content" target="_blank"><h4>justify-content</h4></a>
+        <p>Defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-content" target="_blank"><h4>align-content</h4></a>
+        <p>Sets the distribution of space between and around content items along a grid's block axis.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/place-content" target="_blank"><h4>place-content</h4></a>
+        <p>A shorthand for <code>align-content</code> and <code>justify-content</code>. It can be used in any layout method which utilizes both of these alignment values.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns" target="_blank"><h4>grid-auto-columns</h4></a>
+        <p>Specifies the size of an implicitly-created grid column track.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows" target="_blank"><h4>grid-auto-rows</h4></a>
+        <p>Specifies the size of an implicitly-created grid row track.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow" target="_blank"><h4>grid-auto-flow</h4></a>
+        <p>Controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid" target="_blank"><h4>grid</h4></a>
+        <p>A shorthand property that sets all of the explicit grid properties (<code>grid-template-rows</code>, <code>grid-template-columns</code>, and <code>grid-template-areas</code>), and all the implicit grid properties (<code>grid-auto-rows</code>, <code>grid-auto-columns</code>, and <code>grid-auto-flow</code>), in a single declaration.</p>
+      
+    </section>
+    
+    <section class="main-section"  id="Items">
+      <header>
+      <h1>Items</h1>
+      </header>
+      <p>Properties for the Grid Items. Click on property names for more information.</p>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start" target="_blank"><h4>grid-column-start</h4></a>
+  <p>Specifies a grid item’s start position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement. This start position defines the block-start edge of the grid area.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end" target="_blank"><h4>grid-column-end</h4></a>
+  <p>Specifies a grid item’s end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its grid area.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start" target="_blank"><h4>grid-row-start</h4></a>
+  <p>Specifies a grid item’s start position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start edge of its grid area.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end" target="_blank"><h4>grid-row-end</h4></a>
+  <p>Specifies a grid item’s end position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-end edge of its grid area.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column" target="_blank"><h4>grid-column</h4></a>
+  <p>shorthand property for <code>grid-column-start</code> and <code>grid-column-end</code> specifying a grid item's size and location within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row" target="_blank"><h4>grid-row</h4></a>
+  <p>A shorthand property for <code>grid-row-start</code> and <code>grid-row-end</code> specifying a grid item’s size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area" target="_blank"><h4>grid-area</h4></a>
+  <p>A shorthand property for <code>grid-row-start</code>, <code>grid-column-start</code>, <code>grid-row-end</code> and <code>grid-column-end</code>, specifying a grid item’s size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its grid area.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self" target="_blank"><h4>justify-self</h4></a>
+  <p>Sets the way a box is justified inside its alignment container along the appropriate axis.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self" target="_blank"><h4>align-self</h4></a>
+  <p>Overrides a grid or flex item's <code>align-items</code> value. In Grid, it aligns the item inside the grid area.</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/place-self" target="_blank"><h4>place-self</h4></a>
+  <p>A shorthand property sets both the <code>align-self</code> and <code>justify-self</code> properties. The first value is the <code>align-self</code> property value, the second the <code>justify-self</code> one. If the second value is not present, the first value is also used for it.</p>
+     
+    </section> 
+    <section class="main-section"  id="References">
+      <header>
+      <h1>References</h1>
+      </header>
+      <p>Documentation created using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank">MDN</a> and <a href="https://css-tricks.com/snippets/css/complete-guide-grid/#grid-introduction">CSS Tricks</a>.</p>
+      
+    </section>
+    <div id="back-to-top">
+      <a href="#navbar"><h4>Back to top</h4></a>
+    </div>
+  </main>
+</div>
+  </body>
+</html>
